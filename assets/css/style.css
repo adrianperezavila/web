@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER */
+header {
+    padding: 20px 10%;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nombre técnico destacado */
+.logo {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+/* HERO GENERAL */
+.hero {
+    width: 100%;
+    min-height: 250px; /* mejor que aspect-ratio en móvil */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay oscuro */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Texto sobre imagen */
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+/* Ajuste específico para Home */
+.hero-home {
+    padding-bottom: 5px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+}
+
+/* Pie de foto */
+.photo-caption {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    font-size: 0.8rem;
+    color: #eee;
+    z-index: 2;
+    font-style: italic;
+}
+
+/* HERO POR PÁGINA */
+.hero-home {
+    background-image: url('../images/banner-home.jpg');
+}
+
+.hero-about {
+    background-image: url('../images/banner-about.jpg');
+}
+
+.hero-projects {
+    background-image: url('../images/banner-projects.jpg');
+}
+
+.hero-publications {
+    background-image: url('../images/banner-publications.jpg');
+    
+}
+.hero-contact {
+    background-image: url('../images/banner-contact.jpg');
+}
+
+/* CONTENIDO INFERIOR */
+.content {
+    padding: 40px 10%;
+}
+
+.section-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-text ul {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+/* FORMULARIO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0077cc;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #222;
+}
+
+.contact-info a:hover {
+    color: #0077cc;
+}
+
+/* ICONOS */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 220px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    
+@media (max-width: 768px) {
+
+    .photo-caption {
+        font-size: 0.5rem;
+        opacity: 0.5;
+    }
+
+}
+
+    .content {
+        padding: 40px 5%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+}
