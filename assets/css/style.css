@@ -31,11 +31,22 @@ nav {
 
 /* Nombre técnico destacado */
 .logo {
-    font-family: "Consolas", "Courier New", monospace;
-    font-size: 2rem;
+    font-family:"Segoe UI", Arial, sans-serif;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+.subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-top: 4px;
+}
+
+.small-c {
+    font-size: 0.75em;
+    vertical-align: middle;
 }
 
 /* NAV */
